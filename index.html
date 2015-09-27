@@ -3,11 +3,15 @@
 
   <head>
     <meta charset='utf-8'>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Marry : ">
-    <style> 
-      body{text-align:center} 
+    <style type="text/css"> 
+      body{text-align: center;} 
+      #container{width: 600px;height: 400px; margin-left: auto; margin-right: auto;} 
     </style> 
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=01YFEVN8ZguYacViPgGZzlPz"></script>  
+
   </head>
 
   <body>
@@ -15,10 +19,37 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>我们结婚了</h1>
+        <h1>我们结婚了</h1>  
+  
+       <div id="container"></div> 
+        <script type="text/javascript"> 
+          var map = new BMap.Map("container");          // 创建地图实例  
+          
+           
+          var point = new BMap.Point(111.67767, 40.77896);  // 创建点坐标  
+          map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别 
+          var marker = new BMap.Marker(new BMap.Point(111.677663,40.778916));        // 创建标注      
+          map.addOverlay(marker);
+          var opts = {      
+              width : 100,     // 信息窗口宽度      
+              height: 50,     // 信息窗口高度      
+              title : "<span style='color : #DC3000; font-size : large; font-weight : bold;'>东蓬假日酒店</span>",  // 信息窗口标题  
+              offset: new BMap.Size(7, -25)   
+          }      
+          var infoWindow = new BMap.InfoWindow("内蒙古呼和浩特玉泉区昭君路22号（内蒙古农科院院内）", opts);  // 创建信息窗口对象    
+          marker.addEventListener("click", function(){      
+            map.openInfoWindow(infoWindow, marker.getPosition());      // 打开信息窗口      
+          });  
+          
+
+        </script>
+        
+
+
+
+
         <img name="slide" style="text-align:center;" border=0 width=600 height=900>
         <script>
-        <!--
 
         //configure the paths of the images, plus corresponding target links
         slideimages = [ "600_AC2A0029.JPG",
@@ -89,7 +120,7 @@
         }
         slideit()
 
-        //-->
+        
         </script>
 
       </section>
