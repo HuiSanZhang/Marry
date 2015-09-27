@@ -6,53 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Marry : ">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!--link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"-->
 
     <title>Marry</title>
-    <script language="JavaScript1.1">
-<!--
+      <script language="JavaScript1.1">
+        var slideimages=new Array()
+        var slidelinks=new Array()
+        function slideshowimages(){
+        for (i=0;i<slideshowimages.arguments.length;i++){
+        slideimages[i]=new Image()
+        slideimages[i].src=slideshowimages.arguments[i]
+        }
+        }
 
-/*
-JavaScript Image slideshow:
-By JavaScript Kit (www.javascriptkit.com)
-Over 200+ free JavaScript here!
-*/
+        function slideshowlinks(){
+        for (i=0;i<slideshowlinks.arguments.length;i++)
+        slidelinks[i]=slideshowlinks.arguments[i]
+        }
 
-var slideimages=new Array()
-var slidelinks=new Array()
-function slideshowimages(){
-for (i=0;i<slideshowimages.arguments.length;i++){
-slideimages[i]=new Image()
-slideimages[i].src=slideshowimages.arguments[i]
-}
-}
-
-function slideshowlinks(){
-for (i=0;i<slideshowlinks.arguments.length;i++)
-slidelinks[i]=slideshowlinks.arguments[i]
-}
-
-function gotoshow(){
-if (!window.winslide||winslide.closed)
-winslide=window.open(slidelinks[whichlink])
-else
-winslide.location=slidelinks[whichlink]
-winslide.focus()
-}
-
-//-->
-</script>
+        function gotoshow(){
+        if (!window.winslide||winslide.closed)
+        winslide=window.open(slidelinks[whichlink])
+        else
+        winslide.location=slidelinks[whichlink]
+        winslide.focus()
+        }
+      </script>
   </head>
 
   <body>
-
-    
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>我们结婚了</h1>
-        <img src="hhttps://github.com/HuiSanZhang/Marry/blob/master/600/600_10_1.JPG?raw=true" name="slide" border=0 width=300 height=375>
+        <img src="https://github.com/HuiSanZhang/Marry/blob/master/600/600_10_1.JPG?raw=true" name="slide" border=0 width=600 height=900>
 <script>
 <!--
 
@@ -81,14 +69,6 @@ slideit()
 </script>
 
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Marry maintained by <a href="https://github.com/HuiSanZhang">HuiSanZhang</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
     </div>
 
     
