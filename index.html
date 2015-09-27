@@ -5,33 +5,9 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Marry : ">
-
-    <!--link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"-->
-
-    <title>Marry</title>
-      <script language="JavaScript1.1">
-        var slideimages=new Array()
-        var slidelinks=new Array()
-        function slideshowimages(){
-        for (i=0;i<slideshowimages.arguments.length;i++){
-        slideimages[i]=new Image()
-        slideimages[i].src=slideshowimages.arguments[i]
-        }
-        }
-
-        function slideshowlinks(){
-        for (i=0;i<slideshowlinks.arguments.length;i++)
-        slidelinks[i]=slideshowlinks.arguments[i]
-        }
-
-        function gotoshow(){
-        if (!window.winslide||winslide.closed)
-        winslide=window.open(slidelinks[whichlink])
-        else
-        winslide.location=slidelinks[whichlink]
-        winslide.focus()
-        }
-      </script>
+    <style> 
+      body{text-align:center} 
+    </style> 
   </head>
 
   <body>
@@ -40,33 +16,81 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>我们结婚了</h1>
-        <img src="https://github.com/HuiSanZhang/Marry/blob/master/600/600_10_1.JPG?raw=true" name="slide" border=0 width=1200 height=1800>
-<script>
-<!--
+        <img name="slide" style="text-align:center;" border=0 width=600 height=900>
+        <script>
+        <!--
 
-//configure the paths of the images, plus corresponding target links
-slideshowimages("https://github.com/HuiSanZhang/Marry/blob/master/600/600_10_1.JPG?raw=true","https://github.com/HuiSanZhang/Marry/blob/master/600/600_10_2.JPG?raw=true","https://github.com/HuiSanZhang/Marry/blob/master/600/600_30.JPG?raw=true","https://github.com/HuiSanZhang/Marry/blob/master/600/600_8.JPG?raw=true")
+        //configure the paths of the images, plus corresponding target links
+        slideimages = [ "600_AC2A0029.JPG",
+                        "600_AC2A9966.JPG",
+                        "600_AC2A9947.JPG",
+                        "600_AC2A0009.JPG",
+                        "600_AC2A0028.JPG",
+                        "600_AC2A9936.JPG",
+                        "600_AC2A0030.JPG",
+                        "600_AC2A0001.JPG",
+                        "600_AC2A9942.JPG",
+                        "600_10_1.JPG",
+                        "600_AC2A9996.JPG",
+                        "600_AC2A0031.JPG",
+                        "600_AC2A9945.JPG",
+                        "600_AC2A9992.JPG",
+                        "600_AC2A0006.JPG",
+                        "600_AC2A9939.JPG",
+                        "600_AC2A0024.JPG",
+                        "600_AC2A9997.JPG",
+                        "600_AC2A9968.JPG",
+                        "600_AC2A9949.JPG",
+                        "600_AC2A0027.JPG",
+                        "600_AC2A0015.JPG",
+                        "600_8.JPG",
+                        "600_AC2A9961.JPG",
+                        "600_AC2A9994.JPG",
+                        "600_AC2A9983.JPG",
+                        "600_AC2A9931.JPG",
+                        "600_AC2A9986.JPG",
+                        "600_AC2A0023.JPG",
+                        "600_AC2A0003.JPG",
+                        "600_AC2A9998.JPG",
+                        "600_10_2.JPG",
+                        "600_AC2A9956.JPG",
+                        "600_AC2A9965.JPG",
+                        "600_AC2A0026.JPG",
+                        "600_AC2A9999.JPG",
+                        "600_AC2A9938.JPG",
+                        "600_AC2A9982.JPG",
+                        "600_AC2A9946.JPG",
+                        "600_AC2A9990.JPG",
+                        "600_AC2A0014.JPG",
+                        "600_AC2A0018.JPG",
+                        "600_AC2A9958.JPG",
+                        "600_AC2A0017.JPG",
+                        "600_30.JPG",
+                        "600_AC2A0002.JPG",
+                        "600_AC2A9963.JPG",
+                        "600_AC2A9973.JPG",
+                        "600_AC2A9940.JPG",
+                        "600_AC2A0021.JPG",
+                        "600_AC2A9995.JPG"];
 
-//configure the speed of the slideshow, in miliseconds
-var slideshowspeed=2000
+        //configure the speed of the slideshow, in miliseconds
+        var slideshowspeed=2000
 
-var whichlink=0
-var whichimage=0
-function slideit(){
-if (!document.images)
-return
-document.images.slide.src=slideimages[whichimage].src
-whichlink=whichimage
-if (whichimage<slideimages.length-1)
-whichimage++
-else
-whichimage=0
-setTimeout("slideit()",slideshowspeed)
-}
-slideit()
+        var whichimage=0
+        function slideit(){
+          if (!document.images)
+            return
+          document.images.slide.src="http://github.com/HuiSanZhang/Marry/blob/master/600/"+slideimages[whichimage]+"?raw=true"
+          if (whichimage<slideimages.length-1)
+            whichimage++
+          else
+            whichimage=0
+          setTimeout("slideit()",slideshowspeed)
+        }
+        slideit()
 
-//-->
-</script>
+        //-->
+        </script>
 
       </section>
     </div>
